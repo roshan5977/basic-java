@@ -1,0 +1,14 @@
+package com.feuji.Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Junittests {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

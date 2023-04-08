@@ -1,0 +1,12 @@
+package com.jsp.streamapi;
+
+import java.io.*;
+
+public class Demo2 {
+	public static void main(String[] args) throws Exception {
+   FileInputStream fis= new FileInputStream("writing.txt");
+   FileOutputStream fos =new FileOutputStream("reading.txt");
+   while((fis.read())!=-1)fos.write(fis.read());
+	}
+
+}

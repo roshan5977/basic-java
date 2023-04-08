@@ -1,0 +1,20 @@
+package com.sp.streamapi;
+
+interface Test{
+	void toTest();
+}
+public class Testing {
+       public static void toTesting() {
+		System.out.println("testing sucessfull");
+	}
+       public void toTestingPro()
+       {
+    	   System.out.println("testing pro sucessfull");
+       }
+	public static void main(String[] args) {
+		Test t=new Testing()::toTestingPro;
+		t.toTest();
+
+	}
+
+}

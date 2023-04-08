@@ -1,0 +1,19 @@
+package com.jsp.stringprogram;
+
+import java.util.Scanner;
+
+public class Panagram {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENTER THE FIRST WORD");
+		String s1 = sc.next(), s3 = "";
+		System.out.println("ENTER THE SECOND WORD");
+		String s2 = sc.next();
+		for (int i = 0; i < s1.length(); i++)
+			s2 = s2.replace(s1.charAt(i) + "", "");
+		System.out.println(s2.length() == 0 ? "Anagram" : "not Anagram");
+		sc.close();
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.jsp.dark;
+
+public class CheckingAccount {
+
+//non static private dm
+     private String name;
+	 private String id;
+     private int balance;
+     //public String name;
+    // public String id;
+     //public int balance;
+     
+ //argumented constructor initialise the non static dm
+     public CheckingAccount(String name,String id,int balance)
+     {
+    	this.name=name;
+    	this.id=id;
+    	this.balance=balance;
+     }
+     public void addFunds(int fundsToAdd )
+     {
+    	 balance+=fundsToAdd;
+    	 
+     }
+     public void display()
+     {
+    	 System.out.println("the account holder name is "+name+" with id "+id+"have balance currently "+balance);
+     }
+    
+}

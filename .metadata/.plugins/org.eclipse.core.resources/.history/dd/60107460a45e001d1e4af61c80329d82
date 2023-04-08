@@ -1,0 +1,28 @@
+package com.jsp.Sbi;
+
+public class SBI_BANK extends Bank{
+ 
+	long ifsc;
+	String branch;
+	
+	void createAccount()
+	{
+		
+	}
+	void depositeAmount()
+	{
+		
+	}
+	void withdrawAmount()
+	{
+		
+	}
+	void checkBalance()
+	{
+		
+	}
+	void changePassword()
+	{
+		
+	}
+}

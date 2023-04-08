@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jsp.exceptionHndling.CarAccident&apos; to &apos;Roshan&apos;&#x0D;&#x0A;- Original project: &apos;ExHand_MultIThread&apos;&#x0D;&#x0A;- Original element: &apos;com.jsp.exceptionHndling.CarAccident&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jsp.exceptionHndling.Roshan&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CarAccident&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.jsp.exceptionHndling{CarAccident.java[CarAccident" matchStrategy="1" name="Roshan" qualified="false" references="true" similarDeclarations="true" stamp="1676003906199" textual="false" version="1.0"/>
+</session>

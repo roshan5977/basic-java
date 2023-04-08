@@ -1,0 +1,15 @@
+package com.jsp.comparable;
+public class Student {
+	  int regno;
+	    String name;
+	    double marks;
+	    public String toString()
+	    {
+	    	return "[name "+name+" regno "+regno+" secured "+marks+" ]";
+	    }
+	public static void main(String[] args) {
+      Student s=new Student();
+      System.out.println(s);
+	}
+
+}

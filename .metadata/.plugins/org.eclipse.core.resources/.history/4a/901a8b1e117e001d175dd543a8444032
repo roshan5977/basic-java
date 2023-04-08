@@ -1,0 +1,15 @@
+package com.jsp.comparable;
+
+import java.util.Arrays;
+
+public class ArrayCompare
+{
+
+	public static void main(String[] args) {
+    int a[]= {8,2,4,9,8,0,2,3,6};
+    Arrays.sort(a);
+    for(int x:a)
+    	System.out.print(x+" ");
+	}
+
+}

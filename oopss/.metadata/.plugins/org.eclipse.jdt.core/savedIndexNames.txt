@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+D:\JAVA_JSPIDERS\Jasons_java\oopss\.metadata\.plugins\org.eclipse.jdt.core

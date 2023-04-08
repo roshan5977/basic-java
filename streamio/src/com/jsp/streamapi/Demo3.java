@@ -1,0 +1,34 @@
+package com.jsp.streamapi;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ * 7ways to read data from keyboard 
+ * -console as commandline arguments
+ * -Data outstream class
+ * -Bufferedeader
+ * -Scanner class
+ * -console
+ * -ssystem properties
+ * -GUI (_AWT SWING JAVA FX)
+ * @author HP
+ *
+ */
+public class Demo3 {
+
+	public static void main(String[] args) throws Exception {
+          Scanner s= new Scanner(System.in);
+          String read=s.next();
+          String write=s.next();
+          FileInputStream fis=new FileInputStream(read);
+          FileOutputStream fos= new FileOutputStream(write);
+          int data;
+          while((data=fis.read())!=-1) {
+        	  fos.write(data);
+          }
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.jsp.treeset;
+
+public class BinaryTreeStructure {
+
+	private Node root = null;
+	private int count = 0;
+   public void show()
+   {
+	   System.out.println(display(root));
+   }
+	private String display(Node king) {
+		if (king == null)
+			return "";
+		if (king.left == null && king.right == null)
+			return king.key + "";
+		return display(king.left)  " "+ king.key+" "+ display(king.right);
+	}
+
+	public boolean add(int k) {
+		if (root == null) {
+			root = new Node(k);
+			count++;
+			return true;
+		}
+		Node prev = null;
+		Node curr = root;
+		while (curr != null) {
+			if (k == curr.key)
+				return false;
+			else if (k == curr.key) {
+				prev = curr;
+				curr = curr.left;
+			} else {
+				prev = curr;
+				curr = curr.right;
+			}
+		}
+		if (k < prev.key)
+			prev.left = new Node(k);
+		else if (k > prev.key)
+			prev.right = new Node(k);
+		count++;
+		return true;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.jsp.treeset;
+
+public class TreeSetimplement {
+
+	public static void main(String[] args) {
+     BinaryTreeStructure bt=new BinaryTreeStructure();
+    System.out.println( bt.add(20));
+    System.out.println(bt.add(30));
+    System.out.println(bt.add(50));
+    System.out.println(bt.add(30));
+    System.out.println(bt.add(90));
+    System.out.println(bt.add(50));
+    System.out.println(bt.add(75));
+    System.out.println(bt);
+    
+     
+	}
+
+}

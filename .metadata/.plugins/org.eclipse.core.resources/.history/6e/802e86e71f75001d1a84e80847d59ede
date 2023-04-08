@@ -1,0 +1,19 @@
+package com.jsp.stringprogram;
+
+import java.util.*;
+
+public class Panagram {
+
+	public static void main(String[] args) {
+		String s=new Scanner(System.in).next();
+        for(char x='a';x<='z';x++)
+        {
+                if(s.indexOf(x)==-1) {
+                	System.out.println("not an anagram");
+                	return;
+                }
+        }
+        System.out.println("anagram");
+	}
+
+}

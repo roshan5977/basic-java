@@ -1,0 +1,17 @@
+package com.jsp.collection;
+
+public class SetImplement {
+    int age;
+    String name;
+	public static void main(String[] args) {
+      Set s=new Set();
+     System.out.println(s.add(22));
+     System.out.println(s.add(77));
+     System.out.println(s.add(38));
+     System.out.println(s.add(22));
+     System.out.println(s.add(21));
+     s.display();
+     
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.jsp.comparable;
+public class Student {
+	  int regno;
+	    String name;
+	    double marks;
+	    public Student(int reg,String n,double m )
+	    {
+	    	regno=reg;
+	    	name=n;
+	    	marks=m;
+	    }
+	    public String toString()
+	    {
+	    	return "[name "+name+" regno "+regno+" secured "+marks+" ]";
+	    }
+	public static void main(String[] args) {
+      Student s=new Student(98989,"roshan",88);
+      System.out.println();
+	}
+
+}

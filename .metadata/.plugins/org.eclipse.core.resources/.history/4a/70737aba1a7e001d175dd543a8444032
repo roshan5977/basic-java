@@ -1,0 +1,22 @@
+package com.jsp.comparable;
+
+public class Book
+{
+   String title;
+   double price;
+   public Book(String t,Double p)
+   {
+	   title=t;
+	   price=p;
+   }
+   @Override
+   public  String toString() {
+   return "[ title="+title+",price="+price+"]";
+}
+
+	public static void main(String[] args) {
+    Book b= new Book("java", 200.4);
+    System.out.println(b);
+	}
+
+}

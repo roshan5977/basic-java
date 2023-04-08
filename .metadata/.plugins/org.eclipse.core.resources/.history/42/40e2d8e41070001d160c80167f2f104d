@@ -1,0 +1,48 @@
+package com.jsp.stringprogram;
+
+import java.util.Scanner;
+
+public class Permutation {
+	  static int c=0;
+         static String swap(String s,int i,int j )
+	{
+	 char [] a=s.toCharArray();
+	 char t=a[i];
+	 a[i]=a[j];
+	 a[j]=t;
+		return new String(a);
+	}
+   public static void permutation(String s1,int start,int end)
+   { 
+	   if (start==end) {
+				   c++;
+		System.out.println(s1+":"+c);
+		return;
+	}
+	   for(int i=start;i<=end;i++)
+	   {
+	      String s2=swap(s1,start,i);
+	    //  System.out.println(s2+"+");
+	      permutation(s2,start+1,end);
+	  //    System.out.println("X");
+	   }
+   }
+	public static void main(String[] args) {
+		
+		String s=new Scanner(System.in).next();
+		 char [] a=s.toCharArray();
+		 int count=0;String s1="";
+		 for(int j=0;j<a.length;j++)
+		 {
+			 if (a[0]==a[j]) {
+				 char t=a[0];
+				s1=s.replace(t+"","");
+				 count=s.length()-s1.length();
+				 System.out.println(count);
+				 s=s1;
+			}
+		 }
+    //permutation(s,0,s.length()-1);
+	}
+
+}

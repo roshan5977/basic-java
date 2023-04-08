@@ -1,0 +1,11 @@
+package com.jsp.linkedlist;
+
+public class LinkedlistCheck {
+
+	public static void main(String[] args) {
+     LinkedList list = new LinkedList();
+     list.add(3);
+     System.out.println(count);
+	}
+
+}

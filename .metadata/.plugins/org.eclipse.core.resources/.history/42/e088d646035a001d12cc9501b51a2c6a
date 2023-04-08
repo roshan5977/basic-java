@@ -1,0 +1,26 @@
+package com.jsp.dark;
+
+public class Bank {
+
+	private CheckingAccount person1;
+	private CheckingAccount person2;
+//non primitive reference var made private
+	public Bank()
+	{
+	  person1=new CheckingAccount("roshan","2",200000);
+	  person2=new CheckingAccount("prince","5",1000000);
+	}
+//constructor initialise non static private refernce dm
+   public static void main(String[] args) {
+	Bank b = new Bank();
+	System.out.println(b.person1.name);
+	System.out.println(b.person2.id);
+	b.person1.addFunds(2000);
+	b.person2.addFunds(50000);
+	b.person1.display();
+	b.person2.display();
+	
+	
+}
+
+}

@@ -1,0 +1,66 @@
+package com.sp.streamapi;
+
+import java.util.*;
+
+public class MockTests {
+
+	public static void main(String[] args) {
+    int x[]= {2,3,4,9,6,7,8};
+    int y[]= {3,6,8,2,7,3,0};
+    int z[]= {5,8,2,7,3,9,3,4};
+    sum(x,y);
+//    printArr(mergeThreeArray(x,y,z));
+//    System.out.println(sumOfTwoArr(x,y));
+//    System.out.println(LargestNumArr(y));
+	}
+	public static void printArr(int []a) {
+		for(int x:a)System.out.print(x+" ");
+		System.out.println();
+		
+	}
+
+	public static int[] mergeThreeArray(int[] a, int[] b, int[] c) {
+		int i = 0, j = 0, k = 0, l = 0;
+		int d[] = new int[a.length + b.length+c.length];
+		while (i < a.length)
+			d[l++] = a[i++];
+		while (j < b.length)
+			d[l++] = b[j++];
+		while (k < c.length)
+			d[l++] = c[k++];
+		return d;
+	}
+	public  static void sum(int[] a, int[] b) {
+	 Queue q=new LinkedList<>();
+	 int i=0,j=0,sum=0;
+	 while(i<a.length)
+	 q.add(a[i]);
+	 while(j<b.length)
+		 q.add(b[j]);
+	  while(!q.isEmpty())sum+=(Integer)q.poll();
+	}
+
+	public static int sumOfTwoArr(int[] a, int[] b) {
+		int i = 0, j = 0, sum = 0;
+		while (i < a.length)
+			sum += a[i++];
+		while (j < b.length)
+			sum += b[j++];
+		return sum;
+	}
+
+	public static int LargestNumArr(int[] a) {
+		int res = a[0];
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] > res)
+				res = a[i];
+		}
+		return res;
+	}
+
+	public static int sumOfTwoNum(int a, int b) {
+		return a + b;
+
+	}
+
+}

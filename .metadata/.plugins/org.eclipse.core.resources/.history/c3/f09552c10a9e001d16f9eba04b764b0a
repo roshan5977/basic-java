@@ -1,0 +1,72 @@
+package com.sp.streamapi;
+
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class Student {
+   
+   String name;
+	int id;
+	String gender;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Student(String name, int id, String gender) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.gender = gender;
+	}
+
+	public static void main(String[] args) {
+	 List<Student> slist=new ArrayList<>();
+	 slist.add(new Student("arun",23,"male"));
+	 slist.add(new Student("rahim",23,"male"));
+	 slist.add(new Student("pretika",23,"male"));
+	 slist.add(new Student("aiswariya",23,"male"));
+	 slist.add(new Student("rohit",23,"male"));
+	 slist.add(new Student("pankaj",23,"male"));
+	 slist.add(new Student("akanshya",23,"male"));
+	 slist.add(new Student("roshan",23,"male"));
+	    
+//	 Predicate<Student> p=new Predicate<Student>() {
+//
+//		@Override
+//		public boolean test(Student t) {
+//			t.name.charAt(0)
+//			return false;
+//		}
+		 
+//	 }
+	 
+	 
+	 List<Student> list2=slist.stream().filter( (Student s1)->s1.getName().charAt(0)=='a').collect(Collectors.toList());
+     
+	 for(Student s:list2)
+		 System.out.println(s);
+	}
+
+}

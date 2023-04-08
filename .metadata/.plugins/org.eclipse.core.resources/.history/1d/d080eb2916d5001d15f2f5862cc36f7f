@@ -1,0 +1,86 @@
+package com.sp.streamapi;
+
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Test01 {
+
+	public static void main(String[] args) {
+     ArrayList<Integer> al=new ArrayList<>();
+     al.add(7);
+     al.add(2);
+     al.add(4);
+     al.add(7);
+     /**
+      * allMatch() -returns true if all elements matches the predicate -it takes one para return boolean 
+      * anyMatch()
+      */
+     System.out.println(al.stream().allMatch(e->e%2==0));//false 
+     
+    System.out.println(al.stream().anyMatch(e->e%5==0));//false
+    
+//    al.stream().collect()
+     
+//     al.stream().min(Integer::compare).isPresent();
+//     al.stream().min(Integer::compare).isEmpty();
+//    System.out.println(al.stream().min(Integer::compare).get());
+     Stream<Integer> k=al.stream();
+     
+     Optional<Integer> o=k.min(Integer::compare);
+   if(o.isPresent()) System.out.println( o.get());
+     //max,min,ispresent,get
+   
+   System.out.println("##################################################");
+   
+   List <String> list=List.of("ajay","mahesh","pawan","kalyan","suresh");
+   String s=list.stream().peek((e)->System.out.print("")).collect(Collectors.joining());
+   System.out.println(s);
+   
+//   List <String> list =List.of("pankaj","kumud","fagun","asutosh");
+//		   list.stream().collect(Collectors.joining(","));
+	}
+
+
+}
+
+
+
+
+//Object
+//List<String> strings =List.of("one","two","three","four","five");
+//var map=strings.stream().collect(groupingBy(String::length, counting()));
+
+
+////Accumulate names into a List
+//List<String> list = people.stream()
+//.map(Person::getName)
+//.collect(Collectors.toList());
+//
+////Accumulate names into a TreeSet
+//Set<String> set = people.stream()
+//.map(Person::getName)
+//.collect(Collectors.toCollection(TreeSet::new));
+//
+////Convert elements to strings and concatenate them, separated by commas
+//String joined = things.stream()
+//.map(Object::toString)
+//.collect(Collectors.joining(", "));
+//
+////Compute sum of salaries of employee
+//int total = employees.stream()
+//.collect(Collectors.summingInt(Employee::getSalary));
+//
+////Group employees by department
+//Map<Department, List<Employee>> byDept = employees.stream()
+//.collect(Collectors.groupingBy(Employee::getDepartment));
+//
+////Compute sum of salaries by department
+//Map<Department, Integer> totalByDept = employees.stream()
+//.collect(Collectors.groupingBy(Employee::getDepartment,
+//                       Collectors.summingInt(Employee::getSalary)));
+//
+////Partition students into passing and failing
+//Map<Boolean, List<Student>> passingFailing = students.stream()
+//.collect(Collectors.partitioningBy(s -> s.getGrade() >= PASS_THRESHOLD));
+

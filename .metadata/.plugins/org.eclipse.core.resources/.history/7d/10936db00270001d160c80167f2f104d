@@ -1,0 +1,27 @@
+package com.jsp.stringprogram;
+
+public class Permutation {
+
+         static String swap(String s,int i,int j )
+	{
+	 char [] a=s.toCharArray();
+	 char t=a[i];
+	 a[j]=a[i];
+	 a[i]=t;
+		return new String(a);
+	}
+   public void permutation(String s1,int start,int end)
+   {
+	   
+	   for(int i=start;i<=end;i++)
+	   {
+		    
+	   }
+	   
+   }
+	public static void main(String[] args) {
+		
+     System.out.println( swap("abc",0,2));
+	}
+
+}

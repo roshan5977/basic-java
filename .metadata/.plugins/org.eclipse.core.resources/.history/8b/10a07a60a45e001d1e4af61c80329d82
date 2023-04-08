@@ -1,0 +1,10 @@
+package com.jsp.Sbi;
+
+public class Account {
+
+	private long accountNum;
+	private long password;
+	private long cif;
+    private long balance;
+	
+}
